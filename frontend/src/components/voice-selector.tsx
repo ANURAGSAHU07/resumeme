@@ -11,7 +11,12 @@ import {
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { voices } from "@/data/voices";
 
-export function VoiceSelector({ value, onChange }) {
+type VoiceSelectorProps = {
+  value: string;
+  onChange: (value: string) => void;
+};
+
+export function VoiceSelector({ value, onChange }: VoiceSelectorProps) {
   return (
     <HoverCard openDelay={200}>
       <HoverCardTrigger asChild>
